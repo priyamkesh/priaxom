@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriAxom Projects Gallery</title>
+
+    <style>
+        :root {
+            --bg-color: #050b14;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --gradient-start: #00f2fe;
+            --gradient-end: #4facfe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at top left, rgba(0, 242, 254, 0.05), transparent 40%),
+                              radial-gradient(circle at bottom right, rgba(79, 172, 254, 0.05), transparent 40%);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .brand span {
+            color: var(--gradient-start);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--gradient-start) 0%, #8360c3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        main {
+            padding: 0 5% 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        .glass-card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">PriAxom Projects<span>.</span></div>
+    </header>
+
+    <main>
+        <h1>PriAxom Projects <span class="gradient-text">Gallery.</span></h1>
+        <p class="subtitle">A visual exploration of neural networks, computer vision models, and LLM architectures.</p>
+
+        <div class="gallery-grid">
+            <figure class="glass-card">
+                <img src="p1.png" alt="Project 1">
+            </figure>
+            <figure class="glass-card">
+                <img src="p2.png" alt="Project 2">
+            </figure>
+            <figure class="glass-card">
+                <img src="p3.png" alt="Project 3">
+            </figure>
+            <figure class="glass-card">
+                <img src="p4.png" alt="Project 4">
+            </figure>
+            <figure class="glass-card">
+                <img src="p5.png" alt="Project 5">
+            </figure>
+            <figure class="glass-card">
+                <img src="p6.png" alt="Project 6">
+            </figure>
+            <figure class="glass-card">
+                <img src="p7.png" alt="Project 7">
+            </figure>
+            <figure class="glass-card">
+                <img src="p8.png" alt="Project 8">
+            </figure>
+            <figure class="glass-card">
+                <img src="p9.png" alt="Project 9">
+            </figure>
+            <figure class="glass-card">
+                <img src="p10.png" alt="Project 10">
+            </figure>
+        </div>
+    </main>
+
+</body>
+</html>
